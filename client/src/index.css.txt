@@ -1,0 +1,250 @@
+:root {
+  --primary: #bc4123;
+  --secondary: #2b3452;
+}
+* {
+  margin: 0;
+  color: #333;
+}
+
+.navbar {
+  padding: 20px 30px;
+  border-bottom: 1px solid #f2f2f2;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.navbar h2 {
+  color: brown;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+}
+.navbar a.active {
+  background: var(--primary);
+}
+.navbar a:hover {
+  color: brown;
+}
+
+.welcome-container {
+  font-size: 1.2rem;
+  padding: 10px;
+  left: auto;
+  margin-right: 10px;
+}
+.welcome-container button {
+  margin-left: 10px;
+  background-color: #bc4123;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px;
+}
+
+.content {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blogs {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.blog-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-title h2 {
+  margin-right: 10px;
+}
+
+.blog-likes {
+  position: relative;
+}
+
+.blog-likes .likes-count {
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.blog-likes .likes-count:hover {
+  text-decoration: underline;
+}
+
+.likes-container {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.blog-likes .like-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.blog-title h2 {
+  margin-right: 10px;
+}
+.blog-delete-button {
+  background-color: #bc4123;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.blog-delete-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* blog previews / list*/
+.blog-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.blog-preview h2 {
+  font-size: 20px;
+  color: brown;
+  margin-bottom: 8 px;
+}
+.blog-preview a {
+  text-decoration: none;
+}
+
+/*blog details page*/
+.blog-details h2 {
+  font-size: 20px;
+  color: #bc4123;
+  margin-bottom: 10px;
+}
+.blog-details div {
+  margin: 20px 0;
+}
+.blog-details button {
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.blog-details .author-edit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.author-edit button {
+  margin-left: 10px;
+}
+
+.blog-details .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.blog-details .likes {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.blog-details .content .title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.blog-details .title p svg {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+}
+
+.blog-details .title p span {
+  margin-right: 5px;
+  font-size: 16px;
+}
+/* create*/
+.create {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.create form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create form #title {
+  margin: 20px;
+  width: 50%;
+}
+
+.create label {
+  text-align: left;
+  display: block;
+}
+.create h2 {
+  font-size: 20px;
+  color: #bc4123;
+  margin-bottom: 30px;
+}
+.create input,
+.create textarea,
+.create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+.create button {
+  background: #bc4123;
+  color: #fff;
+  border-radius: 8px;
+  border: 0;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.hover-me::after {
+  content: "You must log in in order to like!";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hover-me:hover::after {
+  opacity: 1;
+}
